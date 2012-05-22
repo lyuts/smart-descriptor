@@ -108,8 +108,11 @@
  *
  * In fact the SmartDescriptor class usage is not limited to SQLite3 types.
  */
-template<typename T> class SmartDescriptor { public: operator bool() { return
-    mDescriptor != 0; }
+template<typename T>
+class SmartDescriptor
+{
+    public:
+        operator bool() { return mDescriptor != 0; }
 
         operator T*() { return static_cast<T*> (mDescriptor); }
 
